@@ -1,0 +1,53 @@
+$colors:(
+    "primary":$clr-primary,
+    "dark":$clr-dark,
+    "light":$clr-light,
+
+);
+// $displays:(
+//     "flex": flex,
+//     "block": block,
+//     "lblock": inline-block,
+// );
+$displays: flex,block,inline-block,none;
+
+$alignments:(
+    "center": center,
+    "justify":justify,
+);
+
+@each $key, $val in $alignments{
+    .text{
+        &--#{$key}{
+           text-align: $val;
+         }
+  }
+}
+
+@each $display in $displays{
+    .d{
+        &--#{$display}{
+           display: $display;
+         }
+  }
+}
+
+@each $key, $val in $colors{
+    .bg{
+        &--#{$key}{
+            background: $val;
+        }
+    }
+    .text{
+        &--#{$key}{
+            color: $val;
+        }
+    }
+}
+
+
+@for $i from 1 through 20{
+    .ml--#{$i}{
+        margin-left: $i + rem ;
+    }
+}

@@ -1,0 +1,131 @@
+.header{
+    background-color: white;
+    box-shadow: $shadow;
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 999;
+        .header__right{
+          
+        }
+        
+   .branding{
+    img{
+        width: 23rem;
+    }
+}
+.toggle__menu{
+    span{
+        width: 3rem;
+        height: .3rem;
+        background-color: black;
+        display: block;
+        margin-bottom: .8rem;
+        &.open{
+            span:first-child{
+                opacity: 0;
+            }
+            span:nth-child{
+                opacity: 0;
+            }
+            span:last-child{
+                opacity: 0;
+            }
+        }
+    }
+}
+.dot__menu{
+    span{
+        width: .8rem;
+        height: .7rem;
+        border-radius: 50%;
+        background-color: black;
+        display: block;
+        margin-bottom: .6rem;
+    }
+}
+   }
+   
+   .dot__content{
+    .dot__context{
+        background-color: rgb(189, 186, 186);
+        width: 30rem;
+        height: 22rem;
+        top: -20rem;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+        &.open{
+            top: 7rem;
+        }
+        ul{
+            li{
+                margin: 2rem;
+                span{
+                    margin-left: 2rem;
+                    font-weight: 700;
+                    font-size: 2rem;
+                }
+                i{
+                    font-size: 2.5rem;
+                }
+            }
+            a{
+                margin: 2rem;
+                font-size: 2.3rem;
+                padding: 1rem 4rem;
+            }
+        }
+    }
+   }
+
+   .slide{
+    width: 30rem;
+    background-color: white;
+    top: 6.8rem;
+    left: -100%;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+    transition: .5s ease-in;
+    &.open{
+        left: 0;
+        transition: .5s ease;
+    }
+    .socmed{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.123);
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            li{
+                font-size: 2.3rem;
+                padding: 3rem 0;
+            }
+        }
+    }
+    .header__nav{
+        ul{
+            li{
+                padding: 2rem 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &:hover{
+                    background-color:#01B3A7 ;
+                }
+                &.active{
+                    background-color: #01B3A7;
+                   }
+                a{
+                    font-size: 2.5rem;
+                    color: black;
+                   
+                }
+            }
+        }
+    }
+   }
+}

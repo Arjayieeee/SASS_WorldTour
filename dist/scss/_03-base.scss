@@ -1,0 +1,16 @@
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+  }
+  
+  body {
+    font-family: $ff-primary;
+    font-size: 1.6rem;
+    line-height: 1.4; 
+   
+    position: relative;
+    a{
+      color: $clr-dark;
+    } 
+  }

@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;800&display=swap");
+/*-----color----*/
+/*-----BREAKPOINT----*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+}
+
+body {
+  font-family: "Nunito", helvetica sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  position: relative;
+}
+body a {
+  color: #000000;
+}
+
+.container {
+  width: 100%;
+  max-width: 150rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--justify {
+  text-align: justify;
+}
+
+.d--flex {
+  display: flex;
+}
+
+.d--block {
+  display: block;
+}
+
+.d--inline-block {
+  display: inline-block;
+}
+
+.d--none {
+  display: none;
+}
+
+.bg--primary {
+  background: #006241;
+}
+
+.text--primary {
+  color: #006241;
+}
+
+.bg--dark {
+  background: #000000;
+}
+
+.text--dark {
+  color: #000000;
+}
+
+.bg--light {
+  background: #ffffff;
+}
+
+.text--light {
+  color: #ffffff;
+}
+
+.ml--1 {
+  margin-left: 1rem;
+}
+
+.ml--2 {
+  margin-left: 2rem;
+}
+
+.ml--3 {
+  margin-left: 3rem;
+}
+
+.ml--4 {
+  margin-left: 4rem;
+}
+
+.ml--5 {
+  margin-left: 5rem;
+}
+
+.ml--6 {
+  margin-left: 6rem;
+}
+
+.ml--7 {
+  margin-left: 7rem;
+}
+
+.ml--8 {
+  margin-left: 8rem;
+}
+
+.ml--9 {
+  margin-left: 9rem;
+}
+
+.ml--10 {
+  margin-left: 10rem;
+}
+
+.ml--11 {
+  margin-left: 11rem;
+}
+
+.ml--12 {
+  margin-left: 12rem;
+}
+
+.ml--13 {
+  margin-left: 13rem;
+}
+
+.ml--14 {
+  margin-left: 14rem;
+}
+
+.ml--15 {
+  margin-left: 15rem;
+}
+
+.ml--16 {
+  margin-left: 16rem;
+}
+
+.ml--17 {
+  margin-left: 17rem;
+}
+
+.ml--18 {
+  margin-left: 18rem;
+}
+
+.ml--19 {
+  margin-left: 19rem;
+}
+
+.ml--20 {
+  margin-left: 20rem;
+}
+
+.header {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+}
+.header__wrapper .branding img {
+  width: 23rem;
+}
+.header__wrapper .toggle__menu span {
+  width: 3rem;
+  height: 0.3rem;
+  background-color: black;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+.header__wrapper .toggle__menu span.open span:first-child {
+  opacity: 0;
+}
+.header__wrapper .toggle__menu span.open span:nth-child {
+  opacity: 0;
+}
+.header__wrapper .toggle__menu span.open span:last-child {
+  opacity: 0;
+}
+.header__wrapper .dot__menu span {
+  width: 0.8rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background-color: black;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+.header .dot__content .dot__context {
+  background-color: rgb(189, 186, 186);
+  width: 30rem;
+  height: 22rem;
+  top: -20rem;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.header .dot__content .dot__context.open {
+  top: 7rem;
+}
+.header .dot__content .dot__context ul li {
+  margin: 2rem;
+}
+.header .dot__content .dot__context ul li span {
+  margin-left: 2rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.header .dot__content .dot__context ul li i {
+  font-size: 2.5rem;
+}
+.header .dot__content .dot__context ul a {
+  margin: 2rem;
+  font-size: 2.3rem;
+  padding: 1rem 4rem;
+}
+.header .slide {
+  width: 30rem;
+  background-color: white;
+  top: 6.8rem;
+  left: -100%;
+  height: 100vh;
+  z-index: -1;
+  position: absolute;
+  transition: 0.5s ease-in;
+}
+.header .slide.open {
+  left: 0;
+  transition: 0.5s ease;
+}
+.header .slide .socmed {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.123);
+}
+.header .slide .socmed ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.header .slide .socmed ul li {
+  font-size: 2.3rem;
+  padding: 3rem 0;
+}
+.header .slide .header__nav ul li {
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .slide .header__nav ul li:hover {
+  background-color: #01B3A7;
+}
+.header .slide .header__nav ul li.active {
+  background-color: #01B3A7;
+}
+.header .slide .header__nav ul li a {
+  font-size: 2.5rem;
+  color: black;
+}
+
+.btn {
+  background-color: #006241;
+  padding: 0.6rem 1.8rem;
+  border: 1px solid;
+  display: inline-block;
+  transition: 300ms;
+}
+.btn-outlinegreen {
+  border-color: #0d9494;
+  background-color: transparent;
+  color: black;
+}
+.btn-outlinegreen:hover {
+  background-color: #0d9494;
+}/*# sourceMappingURL=main.css.map */

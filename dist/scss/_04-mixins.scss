@@ -1,0 +1,28 @@
+@mixin centerAll($height:1px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: $height;
+  }
+
+@mixin imgFit($width: 200px, $height: 200px) {
+    width: $width;
+    height: $height;
+    object-fit: cover;
+    object-fit: center center;
+    display: block;
+  }
+
+@mixin grid($cols:1,$gap:1rem){
+    display: grid;
+    grid-template-columns: repeat($cols,1fr);
+    grid-gap: $gap;
+}
+
+@mixin mediaQuery($width:48rem){
+    @media screen and (min-width:$width){
+        @content
+    }   
+}
+
+

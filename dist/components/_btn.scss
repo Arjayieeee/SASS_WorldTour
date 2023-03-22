@@ -1,0 +1,68 @@
+.btn{
+    background-color: $clr-primary;
+    padding: .6rem 1.8rem;
+    border: 1px solid;
+    display: inline-block;
+    transition: 300ms;
+    // &-outlinelight{
+    //     background-color: transparent;
+    //     color: $clr-light;
+    //     border-color: $clr-light;  
+    //     &:hover{
+    //         background-color: rgba(white, .1);
+    //     }        
+    // }
+    // &-outline-white{
+    //     background-color: $clr-third;
+    //     color: $clr-light;
+    //     border: 1px solid #ffffff;
+    //     padding: .5rem 1.5rem;
+    //     border-radius: 3rem;
+        
+    //     &:hover{
+    //         background-color: rgba(white, .1);
+    //     }        
+    // }
+   
+    // &-dark{
+    //     background-color:$clr-dark;
+    //     color: $clr-light;
+    //     border-color: $clr-light;   
+    //     transition: 300ms;
+    //     &:hover{
+    //         background-color: #585858;
+    //     } 
+
+    // }
+    // &-outlinedark{
+    //     background-color: transparent;
+    //     color: $clr-dark;
+    //     border-color: $clr-dark;
+    //     &:hover{
+    //         background-color: rgba(rgb(116, 111, 111), .1);
+    //     } 
+    // }
+    // &-outlinelightgreen{
+    //     background-color:$clr-primary;
+    //     color: $clr-light;
+    //     &:hover{
+    //         background-color:#1E3932;
+    //     } 
+    // }
+    // &-outlinegreen{
+    //     background-color: transparent;
+    //     color: #1E3932;
+    //     border-color: #1E3932;
+    //     &:hover{
+    //         background-color: rgba(white, .1);
+    //     } 
+    // }
+    &-outlinegreen{
+        border-color:#0d9494;
+        background-color: transparent;
+        color: black;
+        &:hover{
+            background-color:#0d9494 ;
+        }
+    }
+}
