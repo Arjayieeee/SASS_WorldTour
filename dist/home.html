@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../dist/scss/main.css">
     <script src="https://kit.fontawesome.com/8c8e479427.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 </head>
 <body>
     <header class="header">
@@ -32,44 +33,46 @@
                 <ul>
                     <li><i class="fa-regular fa-clock"></i><span>09:00AM — 05:00PM</span></li>
                     <li><i class="fa-solid fa-phone"></i><a href="">+1 323-913-4688</a></li>
-                    <a href="" class="qoute"> <span>Get a Free Qoute</span> </a>
+                    <a href="" class="botton"> <span>Get a Free Qoute</span> </a>
                 </ul>
             </div>
         </div>
 
         </div>
         <div class="slide">
-          <div class="group1">
-            <div class="socmed">
+            <div class="group1">
+                <div class="socmed">
                 <ul>
                     <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
                     <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
                     <li><a href=""><i class="fa-brands fa-google-plus-g"></i></a></li>
                     <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
                 </ul>
-            </div>
-            <div class="header__nav">
+                </div>
+                <div class="header__nav">
                 <ul>
                     <li class="active"><a href="">Home</a> </li>
-                    <li class="down"><a href="" >About</a><i class="fa-solid fa-chevron-down"></i></li>
-                        <div class="content__down">
+                    <li class="down"><a href="#" >About<i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="content__down" id="abt">
                             <ul>
                                 <li><a href="">Our Team</a></li>
                             </ul>
                         </div>
-                    <li class="down"><a href="">Our Tours</a> <i class="fa-solid fa-chevron-down"></i></li>
-                    <div class="content__down">
-                        <ul>
-                            <li><a href="">Single Tour</a></li>
-                        </ul>
-                    </div>
-                    <div class="content__down">
-                        <ul>
-                            <li><a href="">Our Team</a></li>
-                        </ul>
-                    </div>
-                    <li class="down"><a href="">Gallery</a><i class="fa-solid fa-chevron-down"></i></li>
+                        
+                    </li>
+
+                    <li class="down"><a href="#">Our Tours<i class="fa-solid fa-chevron-down"></i></a>
                         <div class="content__down">
+                            <ul>
+                                <li><a href="">Single Tour</a></li>
+                            </ul>
+                        </div>
+                        
+                    </li>
+                   
+                    <li class="down">
+                        <a href="#">Gallery <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="content__down" id="gall">
                             <ul>
                             <li><a href="">Grid Gallery</a></li>
                             <li><a href="">Full Width Gallery</a></li>
@@ -77,8 +80,11 @@
                             <li><a href="">Full Width Masonry Gallery</a></li>
                             </ul>
                         </div>
-                    <li class="down"><a href="">Blog</a><i class="fa-solid fa-chevron-down"></i></li>
-                         <div class="content__down">
+                       
+                    </li>
+                        
+                    <li class="down"><a href="#">Blog<i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="content__down" id="blog">
                             <ul>
                             <li><a href="">Classic Blog</a></li>
                             <li><a href="">Grid Blog</a></li>
@@ -87,28 +93,89 @@
                             <li><a href="">Blog Post</a></li>
                             </ul>
                         </div>
-                    <li><a href="">Contact Us</a><i class="fa-solid fa-chevron-down"></i></li>
-                    <li class="down"><a href="">Pages</a><i class="fa-solid fa-chevron-down"></i></li>
-                        <div class="content__down">
-                            <h2>Elements</h2>
-                            <ul>
-                                <li><a href="">Classic Blog</a></li>
-                                <li><a href="">Grid Blog</a></li>
-                                <li><a href="">Grid Blog 2</a></li>
-                                <li><a href="">Grid Blog 3</a></li>
-                                <li><a href="">Blog Post</a></li>
-                            </ul>
-                        </div>
-                </ul>
-         
+                        
+                    </li>
+                       
+                    <li><a href="">Contact Us</a></li>
+                    <li class="down"><a href="#">Pages<i class="fa-solid fa-chevron-down"></i>  </a>        
+                        <div class="content__down" id="pages">
+                            <div class="first_group">
+                                <h2>Elements</h2>
+                                <ul>
+                                    <li><a href="">Classic Blog</a></li>
+                                    <li><a href="">Grid Blog</a></li>
+                                    <li><a href="">Grid Blog 2</a></li>
+                                    <li><a href="">Grid Blog 3</a></li>
+                                    <li><a href="">Blog Post</a></li>
+                                </ul>
+                            </div>
+                            <div class="second_group">
+                                <h2>Additional Pages</h2>
+                                <ul>
+                                    <li><a href="">Services </a></li>
+                                    <li><a href="">Testimonials</a></li>
+                                    <li><a href="">404 Page</a></li>
+                                    <li><a href="">503 Page</a></li>
+                                    <li><a href="">Pricing</a></li>
+                                    <li><a href="">Coming Soon</a></li>
+                                    <li><a href="">Contact Us</a></li>
+                                    <li><a href="">FAQ</a></li>
+                                    <li><a href="">Search results</a></li>
+                                </ul>
+                            </div>
+                            
+                    </div>   
+                    </li>
+                        
+                    </ul>
+                </div>
+            </div> 
+        </div>      
         </div>
-          </div>
-                 
-    </div>
     </header>
 
-
+   <section class="banner">
+    <div class="banner__wrapper">
+        <div class="content">
+            <div class="image">
+                <div class="container">
+                    <div class="context">
+                        <h3>ENJOY THE BEST DESTINATIONS WITH OUR TRAVEL AGENCY</h3>
+                        <h1>Explore <span>The World</span></h1>
+                        <a href="" class="botton"> <span>Get in touch</span> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="image">
+                <div class="container">
+                    <div class="context">
+                        <h3>shdashdksah</h3>
+                        <h1>bauyga</h1>
+                        <a href="" class="botton"> <span>Get in touch</span> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="image">
+                <div class="container">
+                    <div class="context">
+                        <h3>shdashdksah</h3>
+                        <h1>bauyga</h1>
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </section>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js">
+
+    
+</script>
 
 <script src="script.js"></script>
 </html>

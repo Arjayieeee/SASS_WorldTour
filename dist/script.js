@@ -31,7 +31,18 @@ dotmenu.addEventListener('click', () =>{
 const chev = document.querySelectorAll(".header__nav .down")
 chev.forEach((song) => {
     song.addEventListener("click", () => {
-        song.nextElementSibling.classList.toggle("open");
+        
+        song.querySelector(".content__down").classList.toggle("open");
         song.querySelector("i").classList.toggle("open");
+
     })
 });
+
+
+var slider = tns({
+    container: '.banner__wrapper',
+    items: 1,
+    slideBy: 'page',
+    autoplay: true,
+    axis: "vertical"
+  });

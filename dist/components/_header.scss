@@ -46,7 +46,7 @@
         // transition: .6s ease;
         span:first-child{
             transform: translateY(.6rem) rotate(150deg) ;
-            width: 2rem;
+            width: 1.5rem;
             transition: .5s ease;
         }
         span:nth-child(2){
@@ -55,7 +55,7 @@
         }
         span:last-child{
             transform: translateY(-.6rem) rotate(210deg) ;
-            width: 2rem;
+            width: 1.5rem;
             transition: .5s ease;
         }
        
@@ -64,6 +64,7 @@
 .dot__menu{
     transition: 300ms;
     cursor: pointer;
+    
     @include mediaQuery($break-lg){
         display: none;
        
@@ -98,7 +99,7 @@
    .dot__content{
     
     .dot__context{
-        background-color:rgb(224, 128, 128);
+        background-color:white;
         width: 30rem;
         height: 18rem;
         top: 10rem;
@@ -106,7 +107,7 @@
         position: absolute;
         visibility: hidden;
         transition: 300ms ease;
-        z-index: -1;
+      
         @include mediaQuery($break-lg){
             position: unset;
             visibility: unset;
@@ -115,7 +116,7 @@
            
         }
         &.open{
-            top: 5rem;
+            top: 5.4rem;
             visibility: visible;
             transition: 300ms ease;
         }
@@ -144,10 +145,9 @@
                     font-size: 2.2rem;
                 }
             }
-            a.qoute {
+            a.botton {
                 
                 padding: 1rem 2rem;
-                // border-bottom: 5px solid transparent;
                 display: flex;
                 align-items: center;
                 font-size: clamp(1.5vw, 1.8rem, 2.5rem);
@@ -157,6 +157,7 @@
                 position: relative;
                 max-width: 25rem;
                 margin: 0 auto;
+                
                 &:hover{
                     span {
                         font-size: 2rem;
@@ -182,7 +183,7 @@
                   background: $clr-primary;
                   transform: scaleX(1);
                   transform-origin: bottom center;
-                    z-index: 0;
+                  z-index: 0;
                     
                 }
                 & span{
@@ -201,13 +202,12 @@
    .slide{
     width: 30rem;
     background-color: white;
-    top: 5.2rem;
+    top: 5.4rem;
     left: -100%;
     height: 100vh;
-    z-index: -1;
     position: absolute;
     transition: .5s ease-in;
-    
+    z-index: 999;
     &.open{
         left: 0;
         transition: .5s ease;
@@ -241,9 +241,26 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                @include mediaQuery ($break-lg){
+                @include mediaQuery ($break-lg){    
+                    position: relative;
+                }
                 
-                    &:after{
+                &:hover{
+                    background-color:#01B3A7;
+                    color: white;
+                    
+                    @include mediaQuery ($break-lg){
+                        background-color: rgb(255, 255, 255, .4);
+                        
+                    }
+                    a{
+                    font-size: 1.7rem;
+                      color: white; 
+                     
+                    }
+                }
+                @include mediaQuery ($break-lg){
+                    &::after{
                         content: '';
                         height: 5px;
                         background-color: $clr-primary;
@@ -253,47 +270,38 @@
                         top: 0;
                         transition: 500ms;
                     }
+                    &.active::after{
+                        width: 100%;
+                    }
+                    &:hover:after{
+                        width: 100%;
+                    }
                 }
                 
-                &:hover{
-                    background-color:#01B3A7;
-                    color: white;
-                    @include mediaQuery ($break-lg){
-                        background-color: rgb(255, 255, 255, .4);
-                        &:after{
-                            content: '';
-                            height: 5px;
-                            background-color: $clr-primary;
-                            position: absolute;
-                            left: 0;
-                            width: 0;
-                            top: 0;
-                            transition: 500ms;
-                        }
-                    }
-                    a{
-                    font-size: 1.7rem;
-                      color: white; 
-                     
-                    }
-                }
+
                 a{
                     font-size: 1.7rem;
                     opacity: 95%;
-                    margin: 0 1.5rem; 
+                   
                 }
                
                 &.active{
                     background-color: #01B3A7;
                     color: white;
-                    border-top: 7px solid $clr-primary;
                     @include mediaQuery ($break-lg){
                         background-color: rgb(255, 255, 255, .5);
                         
                     }
                    }
                
-                
+                &.down{
+                    display: block;
+                    a{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                }
             }
         }
         .content__down{
@@ -303,8 +311,6 @@
             ul{
                 li{
                     padding: 1rem;
-                   
-                   
                     a{
                         margin-left: 2rem;
                         opacity: 95%;
@@ -326,15 +332,14 @@
    .header{
           
         .slide{
-
+            
             position: unset;
             height: unset;
-            z-index: unset;
             background-color: black;
             width: 100%;
             .group1{
                 display: flex;
-                max-width: 140rem;
+                max-width: 146rem;
                 margin: 0 auto;
                 align-items: center;
             }
@@ -357,13 +362,14 @@
                 align-items: center;
                 justify-content: space-between;
                 width: 100%;
+                z-index: 1;
                 ul{
                     display: flex;
+                    position: relative;
                     li{
                         width: fit-content;
-                        padding: 3rem 0;
                         margin: 0;
-                        margin-right: .5rem;
+                        margin-right: 1.5rem;
                      
                         i{
                             display: none;
@@ -378,15 +384,107 @@
                         &:hover:after{
                             width: 100%;
                         }
+                        &:hover{
+                            .content__down{
+                                display: block;
+                            }
+                        }
+                       
                     }
                     .content__down{
                         overflow: unset;
                         max-height: unset;
                         position: absolute;
                         display: none;
+                        background: white;
+                        position: absolute;
+                        top: 5.4rem;
+                        left: 0;
+                        min-width: 30rem;
+                        box-shadow: $shadow;
+                        
                         ul{
-                           
+                            li{
+                              
+                                &::after{
+                                    content: none;
+                                }
+                                 a{  
+                                     color: black;
+                                     border-left: 3px solid transparent;
+                                     transition: 300ms;
+                                 }
+                                 &:hover a{
+                                    border-left: 3px solid $clr-primary;
+                                    padding-left: 2rem;
+
+                                 }
+                             } 
                         }
+                        
+                        
+                    }
+                    #abt{
+                        li{
+                            padding: 2rem 1rem;
+                        }
+                    }
+                    #gall{
+                        ul{ 
+                            display: flex;
+                            flex-direction: column;
+                          
+                        }
+                        
+                    }
+                    #blog{
+                        ul{ 
+                            display: flex;
+                            flex-direction: column;
+                          
+                        }
+                        
+                    }
+                    #group{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    #pages{
+                     
+                       width: 70rem;
+                       position: absolute;
+                       left: -55.3rem;
+                       .first_group{
+                            h2{
+                                color: black;
+                            }
+                            ul{
+                                flex-direction: column;
+                            }
+                        }
+                        .second_group{
+                            h2{
+                                color: black;
+                            }
+                            ul{
+                                flex-direction: column;
+                            }
+                        }
+                       
+                    }
+
+                    
+                    .add{
+                        ul{
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+                    .group{
+                        display:flex ;
+                    }
+                    
+                        
                     }
                 }
                
@@ -394,6 +492,7 @@
         }
    } 
    
-}
+
+
 
 

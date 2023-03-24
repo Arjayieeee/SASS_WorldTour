@@ -1,0 +1,117 @@
+.banner{
+    &__wrapper{
+        .content{
+            .image{
+                background-image: url(../img/wonder/bg3.jpg);
+                width: 100%;
+                height: 100vh;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: flex;
+                place-items: center;
+
+                .context{
+                    display: flex;
+                    flex-direction: column;
+                    h3{
+                        color: white;
+                        font-size: 2rem;
+                        font-weight: 500;
+                    }
+                    h1{
+                        color: white;
+                        font-weight: 400;
+                        font-size: 4rem;
+                        padding: 2rem 0;
+                        span{
+                            font-weight: 900;
+                        }
+                    }
+                    a.botton {
+                
+                        padding: .9rem 2rem;
+                        display: flex;
+                        align-items: center;
+                        font-size: clamp(1.5vw, 1.8rem, 2.5rem);
+                        border: 2.5px solid $clr-light;
+                        font-weight: 300;
+                        cursor: pointer;
+                        position: relative;
+                        max-width: 25rem;
+                        color: white;
+                      
+                        
+                        &:hover{
+                            span {
+                                font-size: 2rem;
+                                color: white;
+                              }
+                        }
+                        &:hover{
+                            border: 2px solid $clr-primary;
+                        }
+                        
+                        &:after {
+                          content: "";
+                          position: absolute;
+                          bottom: 0;
+                          left: 0;
+                          width: 100%;
+                          height: 100%;
+                          background: transparent;
+                          transform: scaleX(0);
+                          transform-origin: bottom center;
+                          transition: transform 0.25s ease-out;
+                        }
+                        &:hover:after {
+                          background: $clr-primary;
+                          transform: scaleX(1);
+                          transform-origin: bottom center;
+                          z-index: 0;
+                            
+                        }
+                        & span{
+                            font-size: 2rem;
+                            margin: 0 auto; 
+                            z-index: 999;
+                            
+                            
+                        }
+                      }
+                
+                    
+            }
+            &:nth-child(2) .image{
+                background-image: url(../img/wonder/bg2.jpg);
+
+            }
+            &:last-child .image{
+                background-image: url(../img/wonder/bg1.jpg);
+
+            }
+        }
+    }
+    
+}
+button{
+    display: none;
+}
+}
+
+@include mediaQuery($break-lg){
+    .banner{
+        &__wrapper{
+           .content{
+            .image{
+                .context{
+                    h1{
+                        font-size: 6rem;
+                    }
+                }
+            }
+           } 
+        }
+    }
+}
+
