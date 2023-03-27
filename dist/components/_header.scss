@@ -176,6 +176,7 @@
                   transform: scaleX(0);
                   transform-origin: bottom center;
                   transition: transform 0.25s ease-out;
+                 
                   
                  
                 }
@@ -183,8 +184,8 @@
                   background: $clr-primary;
                   transform: scaleX(1);
                   transform-origin: bottom center;
-                  z-index: 0;
-                    
+                //   z-index: 0;
+                  z-index: -1;
                 }
                 & span{
                     font-size: 2rem;
@@ -310,6 +311,10 @@
            transition: 300ms;
             ul{
                 li{
+                    &:hover{
+                        background-color: $clr-primary;
+                        color: $clr-light;
+                    }
                     padding: 1rem;
                     a{
                         margin-left: 2rem;
@@ -321,6 +326,18 @@
                 max-height: 40rem;
                 transition: 300ms;
             }
+            
+            .first_group{
+                    h2{
+                        font-size: 4rem;
+                    }
+                    .seperate{
+                        &:hover{
+                            background-color: $clr-primary;
+                        }
+                    }
+            }
+            
        }
     }
    }
@@ -450,7 +467,7 @@
                         flex-direction: column;
                     }
                     #pages{
-                     
+                       
                        width: 70rem;
                        position: absolute;
                        left: -55.3rem;

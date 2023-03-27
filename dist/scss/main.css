@@ -328,7 +328,7 @@ body a {
   background: #01B3A7;
   transform: scaleX(1);
   transform-origin: bottom center;
-  z-index: 0;
+  z-index: -1;
 }
 .header .dot__content .dot__context ul a.botton span {
   font-size: 2rem;
@@ -440,6 +440,10 @@ body a {
 .header .slide .header__nav .content__down ul li {
   padding: 1rem;
 }
+.header .slide .header__nav .content__down ul li:hover {
+  background-color: #01B3A7;
+  color: #ffffff;
+}
 .header .slide .header__nav .content__down ul li a {
   margin-left: 2rem;
   opacity: 95%;
@@ -447,6 +451,12 @@ body a {
 .header .slide .header__nav .content__down.open {
   max-height: 40rem;
   transition: 300ms;
+}
+.header .slide .header__nav .content__down .first_group h2 {
+  font-size: 4rem;
+}
+.header .slide .header__nav .content__down .first_group .seperate:hover {
+  background-color: #01B3A7;
 }
 
 @media screen and (min-width: 970px) {
@@ -706,5 +716,222 @@ body a {
 @media screen and (min-width: 970px) {
   .banner__wrapper .content .image .context h1 {
     font-size: 6rem;
+  }
+}
+.imahe {
+  background-color: #F7F7F7;
+}
+.imahe__wrapper .pictures {
+  padding: 2rem 0;
+}
+.imahe__wrapper .pictures .image__content {
+  text-align: center;
+  margin: 0 2rem;
+  overflow: hidden;
+  margin: 3rem 5rem;
+}
+.imahe__wrapper .pictures .image__content figure img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+.imahe__wrapper .pictures .image__content h2 {
+  position: sticky;
+  margin-top: -10rem;
+  padding: 3rem 0;
+  color: #ffffff;
+  z-index: 999;
+}
+.imahe__wrapper .pictures .image__content:hover figure {
+  overflow: hidden;
+}
+.imahe__wrapper .pictures .image__content:hover figure img {
+  transform: scale(1.1);
+  transition: 0.5s ease;
+}
+.imahe__wrapper .arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: 300ms;
+}
+.imahe__wrapper .arrow i {
+  margin-left: 1rem;
+}
+.imahe__wrapper .arrow span {
+  width: 2.5rem;
+  height: 0.2rem;
+  background-color: black;
+  display: block;
+  position: relative;
+  transition: 300ms;
+}
+.imahe__wrapper .arrow span::after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-right: 0px solid transparent;
+  border-left: 6px solid black;
+  right: -0.2rem;
+  top: -0.2rem;
+}
+.imahe__wrapper .arrow .arrower {
+  display: flex;
+  align-items: center;
+}
+.imahe__wrapper .arrow .arrower a {
+  margin-right: 1rem;
+}
+.imahe__wrapper .arrow .arrower:hover span {
+  width: 5rem;
+  transition: 300ms;
+}
+
+@media screen and (min-width: 970px) {
+  .imahe__wrapper .pictures {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -8rem;
+    z-index: 0;
+  }
+  .imahe__wrapper .pictures .image__content {
+    top: 40rem;
+    z-index: 999;
+    margin: 0 1.7rem;
+  }
+  .imahe__wrapper .pictures .image__content figure img {
+    width: 40rem;
+  }
+  .imahe__wrapper .arrower {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.discovery__wrapper .branding img {
+  width: 45rem;
+}
+.discovery__wrapper .branding .discovery__content {
+  text-align: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+.discovery__wrapper .branding .discovery__content h2 {
+  font-size: 3rem;
+}
+.discovery__wrapper .branding .discovery__content .tab:last-child {
+  margin: 1rem;
+}
+.discovery__wrapper .branding .discovery__content .tab ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+}
+.discovery__wrapper .branding .discovery__content .tab ul li {
+  text-align: center;
+  font-size: 2.3rem;
+  color: rgba(0, 0, 0, 0.301);
+  border-top: 1px solid rgba(0, 0, 0, 0.26);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+}
+.discovery__wrapper .branding .discovery__content .tab ul li a {
+  padding: 0.2rem 0;
+}
+.discovery__wrapper .branding .discovery__content .tab ul li a:hover {
+  color: #01B3A7;
+}
+.discovery__wrapper .branding .discovery__content .tab ul #tab-3 {
+  padding: 0.5rem;
+}
+.discovery__wrapper .branding .discovery__content .tab ul #tab-3 ul {
+  margin: 4rem;
+}
+.discovery__wrapper .branding .discovery__content .tab ul #tab-3 a {
+  padding: 0.2rem 0;
+}
+.discovery__wrapper .branding .discovery__content .seperates {
+  padding: 1rem 0;
+}
+.discovery__wrapper .branding .discovery__content .buttons {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+.discovery__wrapper .branding .discovery__content .buttons .get {
+  padding: 2rem 3.5rem;
+  background-color: #01B3A7;
+  color: #ffffff;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  border: 2px solid #01B3A7;
+}
+.discovery__wrapper .branding .discovery__content .buttons .get:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.discovery__wrapper .branding .discovery__content .buttons .read {
+  padding: 2rem 3.5rem;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid black;
+  transition: 300ms;
+  font-weight: 500;
+}
+.discovery__wrapper .branding .discovery__content .buttons .read:hover {
+  border: 2px solid transparent;
+  background-color: #01B3A7;
+  transition: 300ms;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 970px) {
+  .discovery__wrapper .branding {
+    display: flex;
+    gap: 10rem;
+    margin-left: 10rem;
+    padding: 5rem 0;
+  }
+  .discovery__wrapper .branding img {
+    width: 60rem;
+  }
+  .discovery__wrapper .branding .discovery__content {
+    align-items: unset;
+    justify-content: unset;
+  }
+  .discovery__wrapper .branding .discovery__content h2 {
+    font-size: 4rem;
+  }
+  .discovery__wrapper .branding .discovery__content .tab {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+  }
+  .discovery__wrapper .branding .discovery__content .tab ul {
+    padding: 0;
+  }
+  .discovery__wrapper .branding .discovery__content .tab ul li span {
+    border-top: unset;
+    border-bottom: unset;
+    font-size: 1.8rem;
+  }
+  .discovery__wrapper .branding .discovery__content .tab ul li a {
+    border-top: unset;
+    border-bottom: unset;
+    font-size: 1.8rem;
+  }
+  .discovery__wrapper .branding .discovery__content p {
+    max-width: 50rem;
   }
 }/*# sourceMappingURL=main.css.map */
