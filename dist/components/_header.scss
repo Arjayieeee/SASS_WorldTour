@@ -516,7 +516,9 @@
     position: relative;
     background: $clr-light;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    z-index: 99;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
     &__wrapper{
         display: flex;
         align-items: center;
@@ -1246,66 +1248,23 @@
 
 
 // tour
-.tour{
-    &__wrapper{
-        .tour__card{
-            .tour__branding{
-                    h3{
-                        text-align: center;
-                        font-size: 3rem;
-                        padding: 2rem 0;
-                    }
-                }
-            .tour__content{
-                position: relative;
-                img{
-                    width: 45.3rem;
-                    
-                }
-                span{
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    background-color: $clr-primary;
-                    padding: .5rem 1rem;
-                    font-size: 2.2rem;
-                    color: $clr-light;
-                    z-index: 0;
-                    &::before{
-                        content: '';
-                        position: absolute;
-                        height: 0;
-                        width: 0;
-                        border-top: 19px solid transparent;
-                        border-bottom: 19px solid transparent;
-                        border-right: 0px solid transparent;
-                        border-left: 19px solid rgba(253, 251, 251, 0.137);
-                        left: 0;
-                        bottom: -2rem;
-                        overflow: hidden;
-                        z-index: 1;
-                    }
-                    
-                }
-                h4{
-                    font-size: 2.5rem;
-                    font-weight: 500;
-                    padding: 2rem;
-                }
-                .stars{
-                    display: flex;
-                    align-items: center;
-                    
-                    ul{
-                        display: flex;
-                    }
-                }
 
-            }   
+
+
+// scroll
+// .scroll{
+//     a{
        
-        }
-    }
-}
+//        span{
+//         color: red;
+//         display: grid;
+//         place-items: end;
+//         font-size: 4rem;
+//         font-weight: 900;
+     
+//        }
+//     }
+// }
 
 
 

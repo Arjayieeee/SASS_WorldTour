@@ -26,6 +26,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.4;
   position: relative;
+  height: 10000px;
 }
 body a {
   color: #000000;
@@ -170,7 +171,9 @@ body a {
   position: relative;
   background: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  z-index: 99;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
 }
 .header__wrapper {
   display: flex;
@@ -848,54 +851,6 @@ body a {
   }
 }
 
-.tour__wrapper .tour__card .tour__branding h3 {
-  text-align: center;
-  font-size: 3rem;
-  padding: 2rem 0;
-}
-.tour__wrapper .tour__card .tour__content {
-  position: relative;
-}
-.tour__wrapper .tour__card .tour__content img {
-  width: 45.3rem;
-}
-.tour__wrapper .tour__card .tour__content span {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #01B3A7;
-  padding: 0.5rem 1rem;
-  font-size: 2.2rem;
-  color: #ffffff;
-  z-index: 0;
-}
-.tour__wrapper .tour__card .tour__content span::before {
-  content: "";
-  position: absolute;
-  height: 0;
-  width: 0;
-  border-top: 19px solid transparent;
-  border-bottom: 19px solid transparent;
-  border-right: 0px solid transparent;
-  border-left: 19px solid rgba(253, 251, 251, 0.137);
-  left: 0;
-  bottom: -2rem;
-  overflow: hidden;
-  z-index: 1;
-}
-.tour__wrapper .tour__card .tour__content h4 {
-  font-size: 2.5rem;
-  font-weight: 500;
-  padding: 2rem;
-}
-.tour__wrapper .tour__card .tour__content .stars {
-  display: flex;
-  align-items: center;
-}
-.tour__wrapper .tour__card .tour__content .stars ul {
-  display: flex;
-}
-
 .btn {
   background-color: #01B3A7;
   padding: 0.6rem 1.8rem;
@@ -1041,6 +996,8 @@ body a {
 }
 .imahe__wrapper .pictures {
   padding: 2rem 0;
+  position: relative;
+  z-index: 99;
 }
 .imahe__wrapper .pictures .image__content {
   text-align: center;
@@ -1113,7 +1070,7 @@ body a {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -8rem;
+    margin-top: -14rem;
     z-index: 0;
   }
   .imahe__wrapper .pictures .image__content {
@@ -1122,7 +1079,7 @@ body a {
     margin: 0 1.7rem;
   }
   .imahe__wrapper .pictures .image__content figure img {
-    width: 40rem;
+    width: 50rem;
   }
   .imahe__wrapper .arrower {
     text-align: center;
@@ -1365,5 +1322,278 @@ body a {
   .service__wrapper .cards .display__card .card__item .card__context p {
     text-align: justify;
     margin: 0 2.5rem;
+  }
+}
+
+.tour__wrapper .tour__card .tour__branding h3 {
+  text-align: center;
+  font-size: 3rem;
+}
+.tour__wrapper .tour__card .tour__content {
+  position: relative;
+  margin: 5rem 0;
+}
+.tour__wrapper .tour__card .tour__content img {
+  width: 45.3rem;
+}
+.tour__wrapper .tour__card .tour__content span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #01B3A7;
+  padding: 0.5rem 1rem;
+  font-size: 2.2rem;
+  color: #ffffff;
+  z-index: 0;
+}
+@media screen and (min-width: 970px) {
+  .tour__wrapper .tour__card .tour__content span::before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-top: 17px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 0px solid transparent;
+    border-left: 15px solid white;
+    transform: rotate(135deg);
+    left: -0.5rem;
+    bottom: -1.5rem;
+    overflow: hidden;
+    z-index: 1;
+  }
+}
+.tour__wrapper .tour__card .tour__content p {
+  padding: 0.5rem 0;
+}
+.tour__wrapper .tour__card .tour__content h4 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  padding: 2rem 0;
+}
+.tour__wrapper .tour__card .tour__content .stars {
+  display: flex;
+  align-items: center;
+}
+.tour__wrapper .tour__card .tour__content .stars ul {
+  display: flex;
+}
+.tour__wrapper .tour__card .tour__content .stars .customer a:hover {
+  color: #01B3A7;
+}
+.tour__wrapper .tour__card .tour__content .tour__button {
+  padding-top: 2rem;
+}
+.tour__wrapper .tour__card .tour__content .tour__button a.botton {
+  padding: 0.9rem 2rem;
+  display: flex;
+  align-items: center;
+  font-size: clamp(1.5vw, 1.8rem, 2.5rem);
+  border: 2.5px solid black;
+  font-weight: 300;
+  cursor: pointer;
+  position: relative;
+  max-width: 15rem;
+  color: black;
+}
+.tour__wrapper .tour__card .tour__content .tour__button a.botton:hover span {
+  font-size: 2rem;
+  color: white;
+}
+.tour__wrapper .tour__card .tour__content .tour__button a.botton:hover {
+  border: 2px solid #01B3A7;
+}
+.tour__wrapper .tour__card .tour__content .tour__button a.botton:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transform: scaleX(0);
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+.tour__wrapper .tour__card .tour__content .tour__button a.botton:hover:after {
+  background: #01B3A7;
+  transform: scaleX(1);
+  transform-origin: bottom center;
+  z-index: -1;
+}
+.tour__wrapper .tour__card .tour__content .tour__button a.botton span {
+  font-size: 2rem;
+  margin: 0 auto;
+  z-index: 999;
+}
+
+@media screen and (min-width: 970px) {
+  .tour__wrapper .tour__card .tour__branding {
+    padding: 4rem 0;
+  }
+  .tour__wrapper .tour__card .tour__branding h3 {
+    font-size: 3.5rem;
+  }
+  .tour__wrapper .tour__card .tour__content {
+    display: flex;
+    gap: 10rem;
+    border: 2px solid rgba(0, 0, 0, 0.068);
+  }
+  .tour__wrapper .tour__card .tour__content .pic {
+    overflow: hidden;
+  }
+  .tour__wrapper .tour__card .tour__content .pic img {
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+  .tour__wrapper .tour__card .tour__content .pic img:hover {
+    transform: scale(1.1);
+  }
+  .tour__wrapper .tour__card .tour__content .tour__content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  .tour__wrapper .tour__card .tour__content .tour__content2 .tour__button a.botton {
+    max-width: 25rem;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 2rem;
+  }
+  .tour__wrapper .tour__card .tour__content .tour__content2 p {
+    max-width: 60rem;
+  }
+  .tour__wrapper .tour__card .tour__content .tour__content2 .stars {
+    display: flex;
+  }
+}
+.mission__wrapper h2 {
+  text-align: center;
+  font-size: 3.7rem;
+}
+.mission__wrapper .mission__card img {
+  width: 10rem;
+  transform: translateY(2.5rem);
+  border: 2px solid transparent;
+  border-radius: 50%;
+  transition: 300ms;
+}
+.mission__wrapper .mission__card .card__image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mission__wrapper .mission__card .people__info {
+  text-align: center;
+  background-color: #F7F7F7;
+  width: 51%;
+  margin: 0 auto;
+  padding: 2rem;
+  font-size: 2rem;
+}
+.mission__wrapper .mission__card .people__info p {
+  color: #01B3A7;
+}
+.mission__wrapper .mission__card .people__info:hover .name:hover {
+  color: #01B3A7;
+}
+
+@media screen and (min-width: 970px) {
+  .mission__wrapper .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+  }
+  .mission__wrapper .cards .mission__card {
+    padding: 3rem 0;
+  }
+  .mission__wrapper .cards .mission__card:hover img {
+    transform: translateY(-0.5rem);
+    border: 3px solid #01B3A7;
+    border-radius: 50%;
+    transition: 300ms;
+  }
+  .mission__wrapper .cards .mission__card .people__info {
+    width: unset;
+    font-size: 2rem;
+  }
+}
+.impressions {
+  background-image: url("../img/wonder/impressionbg.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.impressions .dark {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.impressions__wrapper .impressions__branding {
+  padding: 3rem 0;
+  position: relative;
+}
+.impressions__wrapper .impressions__branding h3 {
+  font-size: 4.5rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+.impressions__wrapper .impressions__branding h3 span {
+  font-weight: 600;
+}
+.impressions__wrapper .impressions__branding p {
+  color: #ffffff;
+  font-size: 2rem;
+  margin: 0 2rem;
+}
+.impressions__wrapper .impressions__branding a.botton {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.5vw, 1.8rem, 2.5rem);
+  background-color: #01B3A7;
+  border: 2px solid transparent;
+  font-weight: 300;
+  cursor: pointer;
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  color: white;
+  transition: 0.3s ease;
+}
+.impressions__wrapper .impressions__branding a.botton:hover {
+  background-color: transparent;
+  border: 2px solid white;
+  transition: 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 970px) {
+  .impressions__wrapper {
+    margin: 0 auto;
+  }
+  .impressions__wrapper .impressions__branding {
+    max-width: 70rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .impressions__wrapper .impressions__branding h3 {
+    font-size: 5rem;
+    text-align: center;
+  }
+  .impressions__wrapper .impressions__branding p {
+    margin: 2rem 0;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -122,11 +122,14 @@ button{
     &__wrapper{
           .pictures{
             padding: 2rem 0;
+            position: relative;
+            z-index:99;
             .image__content{
                text-align: center;
                margin: 0 2rem;
                overflow: hidden;
                 margin: 3rem 5rem;
+                
                figure{
                 img{
                     width: 100%;
@@ -207,7 +210,7 @@ button{
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    margin-top: -8rem;
+                    margin-top: -14rem;
                     z-index:0 ;
                     .image__content{
                         top: 40rem;
@@ -216,7 +219,7 @@ button{
                         figure{
                             
                             img{
-                                width: 40rem;
+                                width: 50rem;
                             }
                         }
                     }
@@ -234,6 +237,7 @@ button{
 }
 
 .discovery{
+    // padding-top: 50rem;
     &__wrapper{
         .branding{
             img{
@@ -528,5 +532,381 @@ button{
             }
         }
       }
+    }
+}
+
+
+.tour{
+    &__wrapper{
+        .tour__card{
+            .tour__branding{
+                    h3{
+                        text-align: center;
+                        font-size: 3rem;
+                    }
+                }
+            .tour__content{
+                position: relative;
+                margin: 5rem 0;
+                img{
+                    width: 45.3rem;
+                    
+                }
+                span{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background-color: $clr-primary;
+                    padding: .5rem 1rem;
+                    font-size: 2.2rem;
+                    color: $clr-light;
+                    z-index: 0;
+                    
+                    @include mediaQuery ($break-lg){
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            height: 0;
+                            width: 0;
+                            border-top: 17px solid transparent;
+                            border-bottom: 15px solid transparent;
+                            border-right: 0px solid transparent;
+                            border-left: 15px solid white;
+                            transform: rotate(135deg);
+                            left: -.5rem;
+                            bottom: -1.5rem;
+                            overflow: hidden;
+                            z-index: 1;
+                        }
+                        
+                    }
+                    
+                }
+                p{
+                    padding: .5rem 0;
+                }
+                h4{
+                    font-size: 2.5rem;
+                    font-weight: 500;
+                    padding: 2rem 0;
+                   
+                }
+                .stars{
+                    display: flex;
+                    align-items: center;
+                    
+                    ul{
+                        display: flex;
+                    }
+                    .customer{
+                        a{
+                            &:hover{
+                                color: $clr-primary;
+                            }
+                        }
+                    }
+                }
+                .tour__button{
+                    padding-top: 2rem;
+                    a.botton {
+                
+                        padding: .9rem 2rem;
+                        display: flex;
+                        align-items: center;
+                        font-size: clamp(1.5vw, 1.8rem, 2.5rem);
+                        border: 2.5px solid black;
+                        font-weight: 300;
+                        cursor: pointer;
+                        position: relative;
+                        max-width: 15rem;
+                        color: black;
+                      
+                        
+                        &:hover{
+                            span {
+                                font-size: 2rem;
+                                color: white;
+                              }
+                        }
+                        &:hover{
+                            border: 2px solid $clr-primary;
+                            
+                        }
+                        
+                        &:after {
+                          content: "";
+                          position: absolute;
+                          bottom: 0;
+                          left: 0;
+                          width: 100%;
+                          height: 100%;
+                          background: transparent;
+                          transform: scaleX(0);
+                          transform-origin: bottom center;
+                          transition: transform 0.25s ease-out;
+                        }
+                        &:hover:after {
+                          background: $clr-primary;
+                          transform: scaleX(1);
+                          transform-origin: bottom center;
+                          z-index: -1;            
+                        }
+                        & span{
+                            font-size: 2rem;
+                            margin: 0 auto; 
+                            z-index: 999;
+                        }
+                      }
+                }
+
+            }   
+       
+        }
+    }
+}
+
+@include mediaQuery($break-lg){
+    .tour{
+        &__wrapper{
+            .tour__card{
+                .tour__branding{
+                    padding: 4rem 0;
+                    h3{
+                        font-size: 3.5rem;
+                    }
+                }
+                .tour__content{
+                        display: flex; 
+                        gap: 10rem;
+                        border: 2px solid rgba(0, 0, 0, 0.068);
+                    .pic{
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            transition:300ms;
+                            &:hover{
+                                transform: scale(1.1)
+                                
+                            }
+                        }
+                    }
+                   
+                    .tour__content2{
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: start;
+                        .tour__button{
+                            a.botton{
+                                max-width: 25rem;
+                                text-align: center;
+                                justify-content: space-between;
+                                font-size: 2rem;
+                            }  
+                        }
+                        p{
+                            max-width: 60rem;
+                        }
+                        .stars{
+                          display: flex;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// mission
+
+.mission{
+    &__wrapper{
+        h2{
+            text-align: center;
+            font-size:3.7rem ;
+        }
+        .mission__card{
+            img{
+                width: 10rem;
+                transform: translateY(2.5rem);
+                border: 2px solid transparent;
+                border-radius: 50%;
+                transition: 300ms;
+                // &:hover{
+                //     transform: translateY(-.5rem);
+                //     border: 2px solid $clr-primary;
+                //     border-radius: 50%;
+                //     transition: 300ms;
+                // }
+            }
+            
+            .card__image{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .people__info{
+                text-align: center;
+                background-color: #F7F7F7;
+                width: 51%;
+                margin: 0 auto;
+                padding: 2rem ;
+                font-size: 2rem;
+                p{
+                    color: $clr-primary;
+                }
+                &:hover{
+                    .name{
+                      &:hover{
+                        color: $clr-primary;
+                      }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mediaQuery ($break-lg){
+    .mission{
+        &__wrapper{
+            .cards{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6rem;
+                
+                .mission__card{
+                    padding: 3rem 0;
+                    &:hover{
+                        img{
+                            transform: translateY(-.5rem);
+                            border: 3px solid $clr-primary;
+                            border-radius: 50%;
+                            transition: 300ms;
+                        }
+                    }
+                    .people__info{
+                        width: unset;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// impressions
+
+.impressions{
+    background-image: url("../img/wonder/impressionbg.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    .dark{
+        background-color:rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &__wrapper{
+        .impressions__branding{
+            padding: 3rem 0;
+            position: relative;
+          
+            h3{
+                font-size:4.5rem ;
+                color: $clr-light;
+                font-weight: 500;
+              
+                span{
+                    font-weight: 600;
+                }
+            }
+            p {
+                color: $clr-light;
+                font-size: 2rem;
+                margin: 0 2rem;
+            }
+            a.botton {
+                padding: 1rem 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: clamp(1.5vw, 1.8rem, 2.5rem);
+                background-color: $clr-primary;
+                border: 2px solid transparent;
+                font-weight: 300;
+                cursor: pointer;
+                position: relative;
+                width: 50%;
+                margin: 0 auto;
+                color: white;
+                transition: .3s ease;
+                &:hover{
+                    background-color: transparent;
+                    border: 2px solid white;
+                    transition: .3s ease-in-out;
+                }
+                // &:hover{
+                //     border: 2px solid transparent;
+                    
+                // }
+                
+                // &:after {
+                //   content: "";
+                //   position: absolute;
+                //   bottom: 0;
+                //   left: 0;
+                //   width: 100%;
+                //   height: 100%;
+                //   background: transparent;
+                //   transform: scaleX(0);
+                //   transform-origin: bottom center;
+                //   transition: transform 0.25s ease-out;
+                // }
+                // &:hover:after {
+                //   background: $clr-primary;
+                //   transform: scaleX(1);
+                //   transform-origin: bottom center;
+                //   z-index: 0;            
+                // }
+                // & span{
+                //     font-size: 2rem;
+                //     margin: 0 auto; 
+                //     z-index: 999;
+                // }
+              }
+        }
+    }
+}
+
+@include mediaQuery ($break-lg){
+    .impressions{
+        &__wrapper{
+            margin: 0 auto;
+            .impressions__branding{
+                max-width: 70rem;
+                text-align: center;
+                margin: 0 auto;
+                h3{
+                    font-size: 5rem;
+                    text-align: center;
+                }
+                p{
+                    margin: 2rem 0;
+                }
+                
+            }
+        }
     }
 }
