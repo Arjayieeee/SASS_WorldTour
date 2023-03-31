@@ -543,11 +543,12 @@ button{
                     h3{
                         text-align: center;
                         font-size: 3rem;
+    
                     }
                 }
             .tour__content{
                 position: relative;
-                margin: 5rem 0;
+                margin: 3rem 0;
                 img{
                     width: 45.3rem;
                     
@@ -582,6 +583,26 @@ button{
                     }
                     
                 }
+                .tour__content2{
+                    padding:2rem 0 ;
+                    .tour__title{
+                        font-size: 2rem;
+                        margin: 1rem 0;
+                        margin-bottom: 10rem;
+                        transition: .5s ease;
+                        
+                        &:hover{
+                            color: $clr-primary;
+                            transition: .5s ease;
+                        }
+                    }
+                    
+                    p{
+                        max-width: 60rem;
+                        opacity: 50%;
+                    }
+
+                }
                 p{
                     padding: .5rem 0;
                 }
@@ -594,12 +615,20 @@ button{
                 .stars{
                     display: flex;
                     align-items: center;
-                    
+                    padding: .5rem 0;
                     ul{
                         display: flex;
                     }
+                    li{
+                        i{
+                            color: orange;
+                        }
+                    }
                     .customer{
                         a{
+                            margin-left: 1rem;
+                            font-size: 1.4rem;
+                            opacity: 50%;
                             &:hover{
                                 color: $clr-primary;
                             }
@@ -608,17 +637,18 @@ button{
                 }
                 .tour__button{
                     padding-top: 2rem;
-                    a.botton {
+                    a.botton1{
                 
                         padding: .9rem 2rem;
                         display: flex;
                         align-items: center;
-                        font-size: clamp(1.5vw, 1.8rem, 2.5rem);
+                        justify-content: center;
+                        font-size: 2rem;
                         border: 2.5px solid black;
                         font-weight: 300;
                         cursor: pointer;
                         position: relative;
-                        max-width: 15rem;
+                        max-width: 18rem;
                         color: black;
                       
                         
@@ -685,9 +715,17 @@ button{
                             width: 100%;
                             height: 100%;
                             transition:300ms;
-                            &:hover{
-                                transform: scale(1.1)
-                                
+                            transform: scale(1.1);
+                            
+                        }
+                        span{
+                            padding: 2rem 2rem;
+                        }
+                    }
+                    &:hover{
+                        .pic{
+                            img{
+                                transform: scale(1)
                             }
                         }
                     }
@@ -697,6 +735,15 @@ button{
                         flex-direction: column;
                         justify-content: center;
                         align-items: start;
+                        .tour__title{
+                            font-size: 3rem;
+                            margin: 1rem 0;
+                            transition: .5s ease;
+                            &:hover{
+                                color: $clr-primary;
+                                transition: .5s ease;
+                            }
+                        }
                         .tour__button{
                             a.botton{
                                 max-width: 25rem;
@@ -724,7 +771,8 @@ button{
     &__wrapper{
         h2{
             text-align: center;
-            font-size:3.7rem ;
+            font-size:3.5rem ;
+            font-weight: 600;
         }
         .mission__card{
             img{
@@ -745,6 +793,9 @@ button{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                cursor: pointer;
+                
+                
             }
             .people__info{
                 text-align: center;
@@ -781,7 +832,7 @@ button{
                     padding: 3rem 0;
                     &:hover{
                         img{
-                            transform: translateY(-.5rem);
+                            transform: translateY(1.5rem);
                             border: 3px solid $clr-primary;
                             border-radius: 50%;
                             transition: 300ms;
@@ -806,7 +857,7 @@ button{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 500px;
+    height: 350px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -822,9 +873,9 @@ button{
         .impressions__branding{
             padding: 3rem 0;
             position: relative;
-          
+            
             h3{
-                font-size:4.5rem ;
+                font-size:3.5rem ;
                 color: $clr-light;
                 font-weight: 500;
               
@@ -835,7 +886,7 @@ button{
             p {
                 color: $clr-light;
                 font-size: 2rem;
-                margin: 0 2rem;
+                margin: 2rem 2rem;
             }
             a.botton {
                 padding: 1rem 2rem;
@@ -898,6 +949,13 @@ button{
                 max-width: 70rem;
                 text-align: center;
                 margin: 0 auto;
+                a.botton{
+                    padding: 1rem;
+                    width: 20rem;
+                    font-size: 1.7rem;
+                    font-weight: 500;
+                    
+                }
                 h3{
                     font-size: 5rem;
                     text-align: center;
@@ -906,6 +964,366 @@ button{
                     margin: 2rem 0;
                 }
                 
+            }
+        }
+    }
+}
+
+// TESTIMONIALS
+
+.testimonials{
+    background-color: #F7F7F7;
+    &__wrapper{
+        .testi__branding{
+            h2{
+                padding-top: 4rem;
+                text-align: center;
+                font-size: 3rem;
+            }  
+        }
+        .testi__card{
+            .cards{
+                padding: 1rem 0;
+                &__content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    justify-content: center;
+                    margin: 8rem .5rem;
+              
+                    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.30));
+                    background-color: $clr-light;
+                    .card__image{ 
+                        img{
+                            border: 10px solid white;
+                            border-radius: 50%;
+                            transform: translateY(-6rem);
+                            cursor: pointer;
+                        }
+                    }
+                    .cards__context{
+                        margin: 0 1.5rem;
+                        margin-bottom: 2rem;
+                        margin-top: -7rem;
+                        text-align: center;
+                        p{                          
+                            padding: 1.5rem 0;
+                            font-size: 1.6rem;
+                            opacity: 70%; 
+                        }
+                       a{
+                        font-size: 2.2rem;
+                        color: $clr-primary;
+                        &:hover{
+                            color: rgba(27, 163, 68, 0.548);
+                        }
+                       } 
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mediaQuery($break-lg){
+    .testimonials{
+        &__wrapper{
+            .testi__branding{
+                h2{
+                    font-size: 4rem;
+                    padding-top: 4rem;
+                    font-weight: 500;
+                }
+            }
+            .testi__card{
+                
+                .cards{
+                    display: flex;
+                    justify-content: center;
+                    gap: 3rem;
+                    padding: 1rem;
+                    &__content{
+                        .card__image{
+                            img{
+                                cursor: pointer;
+                            }
+                        }
+                        .cards__context{
+                            p{
+                                max-width: 30rem;
+                            }
+                        }  
+                    }
+                }
+                
+            }
+        }
+    }
+   
+}
+
+// DREAMS
+
+.dreams{
+    &__wrapper{
+        .dreams__branding{
+            padding: 4rem 0;
+            h2{
+                text-align: center;
+                font-size: 3rem;
+
+            }
+        }
+        .dreams__cards{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            margin: 3rem;
+            img{
+                width: 30rem;
+            }
+            .dreams__content{
+                background-color: white;
+                position: absolute;
+                top: 1.5rem;
+                width: 27.5rem;
+                height: 21.5rem;
+                .dreams__text{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 7rem 0;
+                    h2{
+                        font-size: 3.5rem;
+                        font-weight: 900;
+                    }
+                    br{
+                        display: none;
+                    }
+                    h4{
+                        font-size: 2rem;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mediaQuery ($break-lg){
+    .dreams{
+        &__wrapper{
+            .dreams__branding{
+                h2{
+                    font-size: 4rem;
+                }
+            }
+            .card{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 4rem;
+                .dreams__cards{
+                    img{
+                        width: 37rem;
+                    }
+                    .dreams__content{
+                        height: 27rem;
+                        top: 1;
+                        width: 33rem;
+                        .dreams__text{
+                            h2{
+                                font-size: 7rem;
+                            }
+                            h4{
+                                font-size: 2.5rem;
+                                max-width: 20rem;
+                                margin: 0 auto;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.signup{
+    background-image: url("../img/wonder/parallax-2-1920x850.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    &__wrapper{
+        position: relative;
+        z-index: 999;
+        .signup__branding{
+            color: $clr-light;
+            text-align: center;
+            padding: 6rem 0;
+            h2{
+                font-size: 3.3rem;
+                text-align: center;
+            }
+            p{
+                max-width: 38rem;
+                margin: 0 auto;
+                opacity: 80%;
+                font-size: 1.5rem;
+                line-height: 2.5rem;
+                padding-top: 2rem;
+                
+            }
+        }
+        .signup__button{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 6rem;
+                input{
+                    width: 45rem;
+                    padding: 2.375rem 0;
+                    margin-bottom: 1rem;
+                    padding-left: 2rem;
+                    background-color: rgb(255, 255, 255, .30);
+                    border: none;
+                    outline: none;
+                    color: white;
+                }
+                ::placeholder{
+                    color: white;
+                    font-size: 1.5rem;
+                    opacity: 90%;
+                    
+                }
+                
+                a{
+                    background-color: $clr-primary;
+                    padding: 2rem 2rem;
+                    width: 45rem;
+                    text-align: center;
+                    color:$clr-light;
+                    transition: .5s ease;
+                    &:hover{
+                        background-color: black;
+                        transition: .5s ease;
+                    }
+                }
+         }
+    }
+    .darker{
+        background-color: rgb(27, 27, 27,.20);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@include mediaQuery ($break-lg){
+    .signup{
+        &__wrapper{
+            .signup__branding{
+                position: relative;
+                z-index:99;
+                h2{
+                    font-size: 5rem;
+                }
+                p{
+                    font-family: $ff-primary;
+                    max-width: 60rem;
+                    font-size: 1.8rem;
+                    padding-top: unset;
+                    opacity: unset;
+                    opacity: 80%;
+                    
+                }
+            }
+            .signup__button{
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                input{
+                    margin: unset;
+                    width: 33rem;
+                }
+                a{
+                    width: 15rem;
+                }
+            }
+        }
+    }
+}
+
+
+// blog
+
+.blog{
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+    &__wrapper{
+        .blog__branding{
+            position: relative;
+            h2{
+                text-align: center;
+                font-size: 3rem;
+                margin-bottom: 4rem;
+            }
+            img{
+                width: 45rem;
+                
+            }
+        }
+        .blog__context{
+            background-color: white;
+            position: absolute;
+            top: 39rem;
+            width: 41rem;
+            left: 2rem;
+            height: 20rem;
+            padding: 3rem 0;
+            z-index: 999;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 8px;
+            h2{
+                font-size: 2.3rem;
+                max-width: 37rem;
+                margin: 0 auto;
+                margin-bottom: 2rem;
+            }
+            h4{
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+            .socmed{
+                
+                ul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1rem;
+                    li{
+                        i{
+                            background-color: black;
+                            padding: 1rem 1rem;
+                            color: white;
+                            border-radius: 50%;
+                            width: 3.5rem;
+                            height: 3.5rem;
+                            display: flex;
+                            justify-content: space-around;
+                            // &:hover{
+
+                            // }
+                        }
+                    }
+                }
             }
         }
     }

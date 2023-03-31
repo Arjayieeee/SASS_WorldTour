@@ -25,8 +25,8 @@ body {
   font-family: "Nunito", helvetica sans-serif;
   font-size: 1.6rem;
   line-height: 1.4;
-  position: relative;
   height: 10000px;
+  position: relative;
 }
 body a {
   color: #000000;
@@ -1331,7 +1331,7 @@ body a {
 }
 .tour__wrapper .tour__card .tour__content {
   position: relative;
-  margin: 5rem 0;
+  margin: 3rem 0;
 }
 .tour__wrapper .tour__card .tour__content img {
   width: 45.3rem;
@@ -1363,6 +1363,23 @@ body a {
     z-index: 1;
   }
 }
+.tour__wrapper .tour__card .tour__content .tour__content2 {
+  padding: 2rem 0;
+}
+.tour__wrapper .tour__card .tour__content .tour__content2 .tour__title {
+  font-size: 2rem;
+  margin: 1rem 0;
+  margin-bottom: 10rem;
+  transition: 0.5s ease;
+}
+.tour__wrapper .tour__card .tour__content .tour__content2 .tour__title:hover {
+  color: #01B3A7;
+  transition: 0.5s ease;
+}
+.tour__wrapper .tour__card .tour__content .tour__content2 p {
+  max-width: 60rem;
+  opacity: 50%;
+}
 .tour__wrapper .tour__card .tour__content p {
   padding: 0.5rem 0;
 }
@@ -1374,9 +1391,18 @@ body a {
 .tour__wrapper .tour__card .tour__content .stars {
   display: flex;
   align-items: center;
+  padding: 0.5rem 0;
 }
 .tour__wrapper .tour__card .tour__content .stars ul {
   display: flex;
+}
+.tour__wrapper .tour__card .tour__content .stars li i {
+  color: orange;
+}
+.tour__wrapper .tour__card .tour__content .stars .customer a {
+  margin-left: 1rem;
+  font-size: 1.4rem;
+  opacity: 50%;
 }
 .tour__wrapper .tour__card .tour__content .stars .customer a:hover {
   color: #01B3A7;
@@ -1384,26 +1410,27 @@ body a {
 .tour__wrapper .tour__card .tour__content .tour__button {
   padding-top: 2rem;
 }
-.tour__wrapper .tour__card .tour__content .tour__button a.botton {
+.tour__wrapper .tour__card .tour__content .tour__button a.botton1 {
   padding: 0.9rem 2rem;
   display: flex;
   align-items: center;
-  font-size: clamp(1.5vw, 1.8rem, 2.5rem);
+  justify-content: center;
+  font-size: 2rem;
   border: 2.5px solid black;
   font-weight: 300;
   cursor: pointer;
   position: relative;
-  max-width: 15rem;
+  max-width: 18rem;
   color: black;
 }
-.tour__wrapper .tour__card .tour__content .tour__button a.botton:hover span {
+.tour__wrapper .tour__card .tour__content .tour__button a.botton1:hover span {
   font-size: 2rem;
   color: white;
 }
-.tour__wrapper .tour__card .tour__content .tour__button a.botton:hover {
+.tour__wrapper .tour__card .tour__content .tour__button a.botton1:hover {
   border: 2px solid #01B3A7;
 }
-.tour__wrapper .tour__card .tour__content .tour__button a.botton:after {
+.tour__wrapper .tour__card .tour__content .tour__button a.botton1:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1415,13 +1442,13 @@ body a {
   transform-origin: bottom center;
   transition: transform 0.25s ease-out;
 }
-.tour__wrapper .tour__card .tour__content .tour__button a.botton:hover:after {
+.tour__wrapper .tour__card .tour__content .tour__button a.botton1:hover:after {
   background: #01B3A7;
   transform: scaleX(1);
   transform-origin: bottom center;
   z-index: -1;
 }
-.tour__wrapper .tour__card .tour__content .tour__button a.botton span {
+.tour__wrapper .tour__card .tour__content .tour__button a.botton1 span {
   font-size: 2rem;
   margin: 0 auto;
   z-index: 999;
@@ -1446,15 +1473,28 @@ body a {
     width: 100%;
     height: 100%;
     transition: 300ms;
-  }
-  .tour__wrapper .tour__card .tour__content .pic img:hover {
     transform: scale(1.1);
+  }
+  .tour__wrapper .tour__card .tour__content .pic span {
+    padding: 2rem 2rem;
+  }
+  .tour__wrapper .tour__card .tour__content:hover .pic img {
+    transform: scale(1);
   }
   .tour__wrapper .tour__card .tour__content .tour__content2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
+  }
+  .tour__wrapper .tour__card .tour__content .tour__content2 .tour__title {
+    font-size: 3rem;
+    margin: 1rem 0;
+    transition: 0.5s ease;
+  }
+  .tour__wrapper .tour__card .tour__content .tour__content2 .tour__title:hover {
+    color: #01B3A7;
+    transition: 0.5s ease;
   }
   .tour__wrapper .tour__card .tour__content .tour__content2 .tour__button a.botton {
     max-width: 25rem;
@@ -1471,7 +1511,8 @@ body a {
 }
 .mission__wrapper h2 {
   text-align: center;
-  font-size: 3.7rem;
+  font-size: 3.5rem;
+  font-weight: 600;
 }
 .mission__wrapper .mission__card img {
   width: 10rem;
@@ -1484,6 +1525,7 @@ body a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 .mission__wrapper .mission__card .people__info {
   text-align: center;
@@ -1511,7 +1553,7 @@ body a {
     padding: 3rem 0;
   }
   .mission__wrapper .cards .mission__card:hover img {
-    transform: translateY(-0.5rem);
+    transform: translateY(1.5rem);
     border: 3px solid #01B3A7;
     border-radius: 50%;
     transition: 300ms;
@@ -1528,7 +1570,7 @@ body a {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height: 500px;
+  height: 350px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -1546,7 +1588,7 @@ body a {
   position: relative;
 }
 .impressions__wrapper .impressions__branding h3 {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   color: #ffffff;
   font-weight: 500;
 }
@@ -1556,7 +1598,7 @@ body a {
 .impressions__wrapper .impressions__branding p {
   color: #ffffff;
   font-size: 2rem;
-  margin: 0 2rem;
+  margin: 2rem 2rem;
 }
 .impressions__wrapper .impressions__branding a.botton {
   padding: 1rem 2rem;
@@ -1589,6 +1631,12 @@ body a {
     text-align: center;
     margin: 0 auto;
   }
+  .impressions__wrapper .impressions__branding a.botton {
+    padding: 1rem;
+    width: 20rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
   .impressions__wrapper .impressions__branding h3 {
     font-size: 5rem;
     text-align: center;
@@ -1596,4 +1644,297 @@ body a {
   .impressions__wrapper .impressions__branding p {
     margin: 2rem 0;
   }
+}
+.testimonials {
+  background-color: #F7F7F7;
+}
+.testimonials__wrapper .testi__branding h2 {
+  padding-top: 4rem;
+  text-align: center;
+  font-size: 3rem;
+}
+.testimonials__wrapper .testi__card .cards {
+  padding: 1rem 0;
+}
+.testimonials__wrapper .testi__card .cards__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 8rem 0.5rem;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
+  background-color: #ffffff;
+}
+.testimonials__wrapper .testi__card .cards__content .card__image img {
+  border: 10px solid white;
+  border-radius: 50%;
+  transform: translateY(-6rem);
+  cursor: pointer;
+}
+.testimonials__wrapper .testi__card .cards__content .cards__context {
+  margin: 0 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: -7rem;
+  text-align: center;
+}
+.testimonials__wrapper .testi__card .cards__content .cards__context p {
+  padding: 1.5rem 0;
+  font-size: 1.6rem;
+  opacity: 70%;
+}
+.testimonials__wrapper .testi__card .cards__content .cards__context a {
+  font-size: 2.2rem;
+  color: #01B3A7;
+}
+.testimonials__wrapper .testi__card .cards__content .cards__context a:hover {
+  color: rgba(27, 163, 68, 0.548);
+}
+
+@media screen and (min-width: 970px) {
+  .testimonials__wrapper .testi__branding h2 {
+    font-size: 4rem;
+    padding-top: 4rem;
+    font-weight: 500;
+  }
+  .testimonials__wrapper .testi__card .cards {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem;
+  }
+  .testimonials__wrapper .testi__card .cards__content .card__image img {
+    cursor: pointer;
+  }
+  .testimonials__wrapper .testi__card .cards__content .cards__context p {
+    max-width: 30rem;
+  }
+}
+.dreams__wrapper .dreams__branding {
+  padding: 4rem 0;
+}
+.dreams__wrapper .dreams__branding h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+.dreams__wrapper .dreams__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 3rem;
+}
+.dreams__wrapper .dreams__cards img {
+  width: 30rem;
+}
+.dreams__wrapper .dreams__cards .dreams__content {
+  background-color: white;
+  position: absolute;
+  top: 1.5rem;
+  width: 27.5rem;
+  height: 21.5rem;
+}
+.dreams__wrapper .dreams__cards .dreams__content .dreams__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem 0;
+}
+.dreams__wrapper .dreams__cards .dreams__content .dreams__text h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+.dreams__wrapper .dreams__cards .dreams__content .dreams__text br {
+  display: none;
+}
+.dreams__wrapper .dreams__cards .dreams__content .dreams__text h4 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 970px) {
+  .dreams__wrapper .dreams__branding h2 {
+    font-size: 4rem;
+  }
+  .dreams__wrapper .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .dreams__wrapper .card .dreams__cards img {
+    width: 37rem;
+  }
+  .dreams__wrapper .card .dreams__cards .dreams__content {
+    height: 27rem;
+    top: 1;
+    width: 33rem;
+  }
+  .dreams__wrapper .card .dreams__cards .dreams__content .dreams__text h2 {
+    font-size: 7rem;
+  }
+  .dreams__wrapper .card .dreams__cards .dreams__content .dreams__text h4 {
+    font-size: 2.5rem;
+    max-width: 20rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+.signup {
+  background-image: url("../img/wonder/parallax-2-1920x850.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+}
+.signup__wrapper {
+  position: relative;
+  z-index: 999;
+}
+.signup__wrapper .signup__branding {
+  color: #ffffff;
+  text-align: center;
+  padding: 6rem 0;
+}
+.signup__wrapper .signup__branding h2 {
+  font-size: 3.3rem;
+  text-align: center;
+}
+.signup__wrapper .signup__branding p {
+  max-width: 38rem;
+  margin: 0 auto;
+  opacity: 80%;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  padding-top: 2rem;
+}
+.signup__wrapper .signup__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 6rem;
+}
+.signup__wrapper .signup__button input {
+  width: 45rem;
+  padding: 2.375rem 0;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  outline: none;
+  color: white;
+}
+.signup__wrapper .signup__button ::-moz-placeholder {
+  color: white;
+  font-size: 1.5rem;
+  opacity: 90%;
+}
+.signup__wrapper .signup__button ::placeholder {
+  color: white;
+  font-size: 1.5rem;
+  opacity: 90%;
+}
+.signup__wrapper .signup__button a {
+  background-color: #01B3A7;
+  padding: 2rem 2rem;
+  width: 45rem;
+  text-align: center;
+  color: #ffffff;
+  transition: 0.5s ease;
+}
+.signup__wrapper .signup__button a:hover {
+  background-color: black;
+  transition: 0.5s ease;
+}
+.signup .darker {
+  background-color: rgba(27, 27, 27, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (min-width: 970px) {
+  .signup__wrapper .signup__branding {
+    position: relative;
+    z-index: 99;
+  }
+  .signup__wrapper .signup__branding h2 {
+    font-size: 5rem;
+  }
+  .signup__wrapper .signup__branding p {
+    font-family: "Nunito", helvetica sans-serif;
+    max-width: 60rem;
+    font-size: 1.8rem;
+    padding-top: unset;
+    opacity: unset;
+    opacity: 80%;
+  }
+  .signup__wrapper .signup__button {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .signup__wrapper .signup__button input {
+    margin: unset;
+    width: 33rem;
+  }
+  .signup__wrapper .signup__button a {
+    width: 15rem;
+  }
+}
+.blog {
+  padding-top: 4rem;
+  padding-bottom: 10rem;
+}
+.blog__wrapper .blog__branding {
+  position: relative;
+}
+.blog__wrapper .blog__branding h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+.blog__wrapper .blog__branding img {
+  width: 45rem;
+}
+.blog__wrapper .blog__context {
+  background-color: white;
+  position: absolute;
+  top: 39rem;
+  width: 41rem;
+  left: 2rem;
+  height: 20rem;
+  padding: 3rem 0;
+  z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 8px;
+}
+.blog__wrapper .blog__context h2 {
+  font-size: 2.3rem;
+  max-width: 37rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+.blog__wrapper .blog__context h4 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.blog__wrapper .blog__context .socmed ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.blog__wrapper .blog__context .socmed ul li i {
+  background-color: black;
+  padding: 1rem 1rem;
+  color: white;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-around;
 }/*# sourceMappingURL=main.css.map */
